@@ -1,4 +1,3 @@
-// Example product data with images (adjust paths as needed)
 const products = [
   { id: 1, title: "Tie-Dye Set", price: 2495.42, imgSrc: "assets/Photos/product-1.jpg" },
   { id: 2, title: "Sunburst Suit", price: 3328.42, imgSrc: "assets/Photos/product-2.jpg" },
@@ -8,11 +7,11 @@ const products = [
   { id: 6, title: "Mono Blazer", price: 2830.50, imgSrc: "assets/Photos/product-6.jpg" }
 ];
 
-// Configuration
+
 const maxBundleItems = 3;
 const discountPercent = 30;
 
-// DOM elements
+
 const productsGrid = document.getElementById("productsGrid");
 const progressText = document.getElementById("progressText");
 const progressFill = document.getElementById("progressFill");
@@ -33,12 +32,9 @@ const rupeeFormatter = new Intl.NumberFormat('en-IN', {
   currency: 'INR',
 });
 
-// Track selections with quantities
 let selectedProducts = [];
 
-/**
- * Create product cards dynamically with toggle buttons
- */
+
 function createProductCards() {
   products.forEach((product) => {
     const card = document.createElement("div");
@@ -95,9 +91,6 @@ function createProductCards() {
   });
 }
 
-/**
- * Update sidebar UI with selected products, progress, discount, subtotal, and steppers
- */
 function updateSidebar() {
   progressText.textContent = `${selectedProducts.length}/${maxBundleItems} added`;
   progressFill.style.width = `${(selectedProducts.length / maxBundleItems) * 100}%`;
@@ -210,9 +203,7 @@ function updateSidebar() {
   }
 }
 
-/**
- * Synchronize product grid toggle buttons with sidebar selection state
- */
+
 function updateProductGridToggles() {
   const buttons = document.querySelectorAll(".product-card .toggle-btn");
   buttons.forEach((button) => {
@@ -230,9 +221,7 @@ function updateProductGridToggles() {
   });
 }
 
-/**
- * Show cart modal with selected items and pricing details
- */
+
 function openCartModal() {
   cartItemsList.innerHTML = "";
   selectedProducts.forEach((p) => {
@@ -252,24 +241,18 @@ function openCartModal() {
   cartModal.classList.remove("hidden");
 }
 
-/**
- * Close the cart modal
- */
+
 function closeCartModal() {
   cartModal.classList.add("hidden");
 }
 
-/**
- * Setup event listeners for modal and CTA button
- */
+
 function setupEventListeners() {
   closeCartBtn.addEventListener("click", closeCartModal);
   addBundleBtn.addEventListener("click", openCartModal);
 }
 
-/**
- * Initialize the bundle builder app
- */
+
 function init() {
   createProductCards();
   setupEventListeners();
