@@ -30,6 +30,7 @@ This project implements a responsive and interactive "Bundle Builder" web UI tha
 ---
 
 ## Folder Structure
+
 bundle-builder/
 ├── index.html
 ├── style.css
