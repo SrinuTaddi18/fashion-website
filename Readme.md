@@ -31,12 +31,12 @@ This project implements a responsive and interactive "Bundle Builder" web UI tha
 
 ## Folder Structure
 
-bundle-builder/
+bundle-builder
 ├── index.html
 ├── style.css
 ├── script.js
-├── assets/
-│   └── Photos/
+├── assets
+│   └── Photos
 │       ├── product-1.jpg
 │       ├── product-2.jpg
 │       ├── product-3.jpg
