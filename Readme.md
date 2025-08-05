@@ -31,6 +31,7 @@ This project implements a responsive and interactive "Bundle Builder" web UI tha
 
 ## Folder Structure
 bundle-builder/
+
 ├── index.html 
 ├── style.css 
 ├── script.js 
@@ -58,7 +59,10 @@ Prices are displayed in Indian Rupees (₹) with appropriate formatting.
 
 ## Deployment
 
-The project can be easily deployed on platforms like Netlify, Vercel, or GitHub Pages for free hosting.
+The project is hosted live at:  
+https://fashionwebsitees.netlify.app/
+
+The project can also be deployed on platforms like Netlify or GitHub Pages for free hosting.
 
 
 ## Author
